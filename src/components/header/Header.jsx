@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faSearch,
   faShoppingCart,
+  faTimes,
 } from "@fortawesome/fontawesome-free-solid";
 import "./header.styles.css";
 
@@ -19,19 +20,30 @@ const Header = () => {
     <div className="header">
       <div className="header-left">
         <div className="hamburger">
-          <FontAwesomeIcon icon={faBars} onClick={handleClick} />
+          <FontAwesomeIcon
+            icon={navActiveState ? faTimes : faBars}
+            onClick={handleClick}
+          />
           <ul className={`nav-list ${navActiveState ? "active" : ""}`}>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={handleClick}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="shop">Shop</Link>
+              <Link to="shop" onClick={handleClick}>
+                Shop
+              </Link>
             </li>
             <li>
-              <Link to="about">About</Link>
+              <Link to="about" onClick={handleClick}>
+                About
+              </Link>
             </li>
             <li>
-              <Link to="contact">Contact</Link>
+              <Link to="contact" onClick={handleClick}>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
