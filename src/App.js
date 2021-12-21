@@ -9,6 +9,7 @@ import ShopPage from "./pages/shop-page/ShopPage";
 import { Routes, Route } from "react-router-dom";
 
 import logo from "./img/logo.PNG";
+import LoginPage from "./pages/login-page/LoginPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="about" element={<AboutPage />} />
           <Route path="shop" element={<ShopPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="login" element={<LoginPage />} />
         </Routes>
       </div>
       <Footer />

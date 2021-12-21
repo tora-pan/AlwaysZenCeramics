@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,6 +6,7 @@ import {
   faSearch,
   faShoppingCart,
   faTimes,
+  faUser,
 } from "@fortawesome/fontawesome-free-solid";
 import "./header.styles.css";
 
@@ -49,6 +50,12 @@ const Header = () => {
         </div>
       </div>
       <div className="header-right">
+        <div className="user-profile">
+          <Link to="login">
+            <FontAwesomeIcon icon={faUser} />
+          </Link>
+        </div>
+
         <div className="search">
           <FontAwesomeIcon icon={faSearch} />
         </div>

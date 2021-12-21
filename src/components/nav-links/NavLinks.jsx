@@ -7,19 +7,19 @@ const NavLinks = () => {
     <div className="navlink-list">
       <ul>
         <li className="navlink-links">
-          <a href="#">Cups</a>
+          <a href="#cups">Cups</a>
         </li>
         <li className="navlink-links">
-          <a href="#">Bowls</a>
+          <a href="#bowls">Bowls</a>
         </li>
         <li className="navlink-links">
-          <a href="#">Plates</a>
+          <a href="#plates">Plates</a>
         </li>
         <li className="navlink-links">
-          <a href="#">Utensils</a>
+          <a href="#utensils">Utensils</a>
         </li>
         <li className="navlink-links">
-          <a href="#">Other</a>
+          <a href="#other">Other</a>
         </li>
       </ul>
     </div>
