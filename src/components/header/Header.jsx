@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,9 +9,12 @@ import {
   faUser,
 } from "@fortawesome/fontawesome-free-solid";
 import "./header.styles.css";
+import { UserContext } from "../../context/UserContext";
 
 const Header = () => {
   const [navActiveState, setNavActiveState] = useState(false);
+
+  const user = useContext(UserContext);
 
   const handleClick = () => {
     setNavActiveState(!navActiveState);
@@ -51,8 +54,9 @@ const Header = () => {
       </div>
       <div className="header-right">
         <div className="user-profile">
+          {user ? `Welcome ${user.displayName}!  ` : 'You need to sign in.'}
           <Link to="login">
-            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon className="test" icon={faUser} />
           </Link>
         </div>
 

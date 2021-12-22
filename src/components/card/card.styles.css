@@ -146,6 +146,7 @@
   font-family: "Bree Serif", serif;
   transition: all 0.3s ease-out;
   transform: translateX(-100%);
+  /* margin-left:10px; */
   position: absolute;
   line-height: 1.8;
   text-align: left;
@@ -177,4 +178,7 @@
 }
 .product-image:hover img {
   transform: scale(1.2, 1.2);
+}
+.product-image:hover ul{
+  padding-left: 30px;
 }

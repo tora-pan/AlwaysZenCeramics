@@ -64,3 +64,10 @@
   cursor: pointer;
   position: relative;
 }
+
+.loggedin {
+  color: yellow;
+}
+.loggedout{
+  color:red;
+}
